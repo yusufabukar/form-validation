@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset='UTF-8'>
+		<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+		<title>Form Validation</title>
+		<link rel='icon' type='image/png' href='favicon.png'>
+		<link rel='stylesheet' type='text/css' href='style.css'>
+	</head>
+	<body>
+		<div class='container'>
+			<h1>Sign Up Today!</h1>
+			<form>
+				<div class='form-group'>
+					<label for='name'>Name</label>
+					<input id='name' type='text' name='name' placeholder='Name' required minlength='2' maxlength='100'>
+				</div>
+				<div class='form-group'>
+					<label for='email'>Email Address</label>
+					<input id='email' type='email' name="email" placeholder='username@hostname.tld' required>
+				</div>
+				<div class='form-group'>
+					<label for='number'>Phone Number</label>
+					<input id='number' type='tel' name='number' placeholder='07987654321' required pattern='0[0-9]{10}'>
+				</div>
+				<div class='form-group'>
+					<label for='website'>Website</label>
+					<input id='website' type='url' name='website' placeholder='https://portfolio.yusufabukar.com' required>
+				</div>
+				<div class='form-group'>
+					<label for='password'>Password</label>
+					<input id='password' type='password' placeholder='Password' title='At least 1 uppercase, lowercase, and number required.' required pattern='^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$'>
+				</div>
+				<div class='form-group'>
+					<label for='password-confirm'>Confirm Password</label>
+					<input id='password-confirm' type='password' name='password' placeholder='Confirm Password' required pattern='^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$'>
+				</div>
+				<button type='submit'>Sign Up</button>
+			</form>
+			<div class='message-container'>
+				<h3 id='message'>Don't Hesitate!</h3>
+			</div>
+		</div>
+		<script src='script.js'></script>
+	</body>
+</html>
